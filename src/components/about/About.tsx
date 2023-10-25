@@ -8,7 +8,7 @@ import { ReactComponent as FileDownloadIcon } from "../../assets/file-download-a
 import { AboutProps } from "../../interface/interface";
 
 const resumeLink =
-  "http://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing";
+  "https://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing";
 
 function About() {
   const [aboutData, setAboutData] = useState<AboutProps>();

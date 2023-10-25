@@ -1,8 +1,9 @@
 import axios from "axios";
 
 // export const API_ENDPOINT = 'http://127.0.0.1:8000';
-// export const API_ENDPOINT = 'https://minseo-portfolio-4f6b9f454d74.herokuapp.com';
-export const API_ENDPOINT = "http://3.39.23.121:80";
+export const API_ENDPOINT =
+  "https://minseo-portfolio-4f6b9f454d74.herokuapp.com";
+// export const API_ENDPOINT = "http://3.39.23.121:80";
 
 const instance = axios.create({
   baseURL: API_ENDPOINT,
