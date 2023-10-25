@@ -10,6 +10,7 @@ const instance = axios.create({
   headers: {
     "Access-Control-Allow-Credentials": "true",
     "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
   },
 });
 
