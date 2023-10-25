@@ -82,11 +82,11 @@ function ProjectList() {
             key={index}
             id={item.id}
             title={item.title}
-            images={item.images}
             category={item.category}
             period={item.period}
             description={item.description}
             stack={item.stack}
+            image_tag={item.image_tag}
           />
         ))}
       </div>
