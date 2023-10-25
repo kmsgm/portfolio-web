@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
-import './About.css';
-import WordCloud from './chart/WordCloud';
-import { api } from '../../api/api';
-import { ReactComponent as FileDownloadIcon } from '../../assets/file-download-alt.svg';
-import { AboutProps } from '../../interface/interface';
+import "./About.css";
+import WordCloud from "./chart/WordCloud";
+import { api } from "../../api/api";
+import { ReactComponent as FileDownloadIcon } from "../../assets/file-download-alt.svg";
+import { AboutProps } from "../../interface/interface";
 
 const resumeLink =
-  'https://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing';
+  "http://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing";
 
 function About() {
   const [aboutData, setAboutData] = useState<AboutProps>();
@@ -34,7 +34,10 @@ function About() {
         <WordCloud width={500} height={500} />
         <div className="about__data">
           <p className="about__description">{aboutData?.description}</p>
-          <button className="button button--flex" onClick={() => window.open(resumeLink, '_blank')}>
+          <button
+            className="button button--flex"
+            onClick={() => window.open(resumeLink, "_blank")}
+          >
             Download Resume
             <FileDownloadIcon className="download-icon" />
           </button>
