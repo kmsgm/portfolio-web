@@ -4,9 +4,6 @@ export const API_ENDPOINT = "https://minseo-portfolio.shop";
 
 const instance = axios.create({
   baseURL: API_ENDPOINT,
-  // headers: {
-  //   "Access-Control-Allow-Origin": "*",
-  // },
 });
 
 export const api = {
