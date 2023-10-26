@@ -33,7 +33,7 @@ function ProjectList() {
       const data = await api.getProjectsData();
       setProjects(data);
     } catch (error: any) {
-      toast.error(`${error.message}`);
+      toast.error(`Projects: ${error.message}`);
     }
   };
 
@@ -42,7 +42,7 @@ function ProjectList() {
       const data = await api.getFilteredProjectsData(category);
       setProjects(data);
     } catch (error: any) {
-      toast.error(`${error.message}`);
+      toast.error(`Projects: ${error.message}`);
     }
   };
 

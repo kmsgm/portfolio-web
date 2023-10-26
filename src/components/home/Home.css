@@ -189,6 +189,14 @@
   .home__scroll {
     display: none;
   }
+
+  .skill__list {
+    width: 50px;
+  }
+
+  .skill-icon svg {
+    width: 20px;
+  }
 }
 
 /* For small devices */

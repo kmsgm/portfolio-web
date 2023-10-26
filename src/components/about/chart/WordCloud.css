@@ -19,3 +19,12 @@
 .wordcloud textarea {
   min-height: 100px;
 }
+
+/* =================== BREAKPOINTS ===================
+
+/* For larger devices */
+@media screen and (width <= 992px) {
+  .wordcloud {
+    align-items: center;
+  }
+}

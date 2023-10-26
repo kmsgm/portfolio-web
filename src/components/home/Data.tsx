@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
-import { api } from '../../api/api';
-import { ReactComponent as CIcon } from '../../assets/skills/c.svg';
-import { ReactComponent as CSSIcon } from '../../assets/skills/css.svg';
-import { ReactComponent as HtmlIcon } from '../../assets/skills/html.svg';
-import { ReactComponent as JSIcon } from '../../assets/skills/javascript.svg';
-import { ReactComponent as PythonIcon } from '../../assets/skills/python.svg';
-import { ReactComponent as ReactIcon } from '../../assets/skills/react.svg';
-import { ReactComponent as TSIcon } from '../../assets/skills/typescript.svg';
-import { HomeProps } from '../../interface/interface';
+import { api } from "../../api/api";
+import { ReactComponent as CIcon } from "../../assets/skills/c.svg";
+import { ReactComponent as CSSIcon } from "../../assets/skills/css.svg";
+import { ReactComponent as HtmlIcon } from "../../assets/skills/html.svg";
+import { ReactComponent as JSIcon } from "../../assets/skills/javascript.svg";
+import { ReactComponent as PythonIcon } from "../../assets/skills/python.svg";
+import { ReactComponent as ReactIcon } from "../../assets/skills/react.svg";
+import { ReactComponent as TSIcon } from "../../assets/skills/typescript.svg";
+import { HomeProps } from "../../interface/interface";
 
 const Icons = [
   <PythonIcon />,
@@ -30,7 +30,7 @@ function Data() {
         const data = await api.getHomeData();
         setHomeData(data);
       } catch (error: any) {
-        toast.error(`${error.message}`);
+        toast.error(`Home: ${error.message}`);
       }
     };
 

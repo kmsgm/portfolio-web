@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
-import { scaleLog } from '@visx/scale';
-import { Text } from '@visx/text';
-import Wordcloud from '@visx/wordcloud/lib/Wordcloud';
-import { useState } from 'react';
+import { scaleLog } from "@visx/scale";
+import { Text } from "@visx/text";
+import Wordcloud from "@visx/wordcloud/lib/Wordcloud";
+import { useState } from "react";
 
-import './WordCloud.css';
-import { Intorduction } from './text';
+import "./WordCloud.css";
+import { Intorduction } from "./text";
 
 interface ExampleProps {
   width: number;
@@ -18,17 +18,20 @@ export interface WordData {
   value: number;
 }
 
-const colors = ['#15B8FC', '#0773C4', '#055893'];
+const colors = ["#15B8FC", "#0773C4", "#055893"];
 
 function wordFreq(text: string): WordData[] {
-  const words: string[] = text.replace(/\./g, '').split(/\s/);
+  const words: string[] = text.replace(/\./g, "").split(/\s/);
   const freqMap: Record<string, number> = {};
 
   for (const w of words) {
     if (!freqMap[w]) freqMap[w] = 0;
     freqMap[w] += 1;
   }
-  return Object.keys(freqMap).map((word) => ({ text: word, value: freqMap[word] }));
+  return Object.keys(freqMap).map((word) => ({
+    text: word,
+    value: freqMap[word],
+  }));
 }
 
 function getRotationDegree() {
@@ -40,17 +43,20 @@ function getRotationDegree() {
 const words = wordFreq(Intorduction);
 
 const fontScale = scaleLog({
-  domain: [Math.min(...words.map((w) => w.value)), Math.max(...words.map((w) => w.value))],
+  domain: [
+    Math.min(...words.map((w) => w.value)),
+    Math.max(...words.map((w) => w.value)),
+  ],
   range: [10, 180],
 });
 const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
 
 const fixedValueGenerator = () => 0.5;
 
-type SpiralType = 'archimedean' | 'rectangular';
+type SpiralType = "archimedean" | "rectangular";
 
 function WordCloud({ width, height, showControls }: ExampleProps) {
-  const [spiralType, setSpiralType] = useState<SpiralType>('archimedean');
+  const [spiralType, setSpiralType] = useState<SpiralType>("archimedean");
   const [withRotation, setWithRotation] = useState(false);
 
   return (

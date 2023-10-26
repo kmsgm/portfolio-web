@@ -1,8 +1,8 @@
 // import React from 'react';
-import './Home.css';
-import Data from './Data';
-import ScrollDown from './ScrollDown';
-import Social from './Social';
+import "./Home.css";
+import Data from "./Data";
+import ScrollDown from "./ScrollDown";
+import Social from "./Social";
 
 function Home() {
   return (

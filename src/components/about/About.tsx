@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import "./About.css";
-import WordCloud from "./chart/WordCloud";
 import { api } from "../../api/api";
 import { ReactComponent as FileDownloadIcon } from "../../assets/file-download-alt.svg";
 import { AboutProps } from "../../interface/interface";
+import WordCloud from "./chart/WordCloud";
 
 const resumeLink =
   "https://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing";
@@ -19,7 +19,7 @@ function About() {
         const data = await api.getAboutData();
         setAboutData(data);
       } catch (error: any) {
-        toast.error(`${error.message}`);
+        toast.error(`About: ${error.message}`);
       }
     };
 
@@ -31,7 +31,9 @@ function About() {
       <h2 className="section__title">About me</h2>
       <span className="section__subtitle">My introduction</span>
       <div className="about__container container grid">
-        <WordCloud width={500} height={500} />
+        <div className="about__chart">
+          <WordCloud width={400} height={400} />
+        </div>
         <div className="about__data">
           <p className="about__description">{aboutData?.description}</p>
           <button
