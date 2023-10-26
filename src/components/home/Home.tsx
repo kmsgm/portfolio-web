@@ -1,6 +1,6 @@
 // import React from 'react';
 import "./Home.css";
-import Data from "./Data";
+import Info from "./Info";
 import ScrollDown from "./ScrollDown";
 import Social from "./Social";
 
@@ -11,7 +11,7 @@ function Home() {
         <div className="home__content grid">
           <Social />
           <div className="home__img" />
-          <Data />
+          <Info />
         </div>
         <ScrollDown />
       </div>

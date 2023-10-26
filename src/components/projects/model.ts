@@ -3,7 +3,7 @@ export interface ProjectsDataProps {
   title: string;
   period: string;
   description: string;
-  stack: string[];
+  stack: string;
   category: string;
   image_tag: string;
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 import { ProjectsNavProps, ProjectsDataProps } from "./model";
 import ProjectItem from "./ProjectItem";
 import { api } from "../../api/api";
+import { localProjectsData } from "./data";
 
 const projectsNav = [
   {
@@ -33,7 +33,7 @@ function ProjectList() {
       const data = await api.getProjectsData();
       setProjects(data);
     } catch (error: any) {
-      toast.error(`Projects: ${error.message}`);
+      setProjects(localProjectsData);
     }
   };
 
@@ -42,7 +42,10 @@ function ProjectList() {
       const data = await api.getFilteredProjectsData(category);
       setProjects(data);
     } catch (error: any) {
-      toast.error(`Projects: ${error.message}`);
+      const filtered = localProjectsData.filter(
+        (item) => item.category === category
+      );
+      setProjects(filtered);
     }
   };
 
@@ -90,7 +93,6 @@ function ProjectList() {
           />
         ))}
       </div>
-      <Toaster />
     </>
   );
 }

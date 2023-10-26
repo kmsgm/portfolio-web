@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 import { api } from "../../api/api";
 import { ReactComponent as CIcon } from "../../assets/skills/c.svg";
@@ -10,6 +9,7 @@ import { ReactComponent as PythonIcon } from "../../assets/skills/python.svg";
 import { ReactComponent as ReactIcon } from "../../assets/skills/react.svg";
 import { ReactComponent as TSIcon } from "../../assets/skills/typescript.svg";
 import { HomeProps } from "../../interface/interface";
+import { localHomeData } from "./data";
 
 const Icons = [
   <PythonIcon />,
@@ -21,7 +21,7 @@ const Icons = [
   <ReactIcon />,
 ];
 
-function Data() {
+function Info() {
   const [homeData, setHomeData] = useState<HomeProps>();
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Data() {
         const data = await api.getHomeData();
         setHomeData(data);
       } catch (error: any) {
-        toast.error(`Home: ${error.message}`);
+        setHomeData(localHomeData);
       }
     };
 
@@ -58,9 +58,8 @@ function Data() {
       ) : (
         <h1>Loading...</h1>
       )}
-      <Toaster />
     </div>
   );
 }
 
-export default Data;
+export default Info;

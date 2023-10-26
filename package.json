@@ -37,7 +37,8 @@
     "stylelint": "stylelint \"src/**/*.{css, scss}\"",
     "stylelint:fix": "stylelint --fix \"src/**/*.{css, scss}\"",
     "check": "yarn lint && yarn stylelint",
-    "fix": "yarn lint:fix && yarn stylelint:fix"
+    "fix": "yarn lint:fix && yarn stylelint:fix",
+    "deploy": "aws s3 sync ./build s3://minseo-bucket --profile=minseo"
   },
   "eslintConfig": {
     "extends": [
