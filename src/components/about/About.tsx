@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
 
 import "./About.css";
 import { api } from "../../api/api";
 import { ReactComponent as FileDownloadIcon } from "../../assets/file-download-alt.svg";
 import { AboutProps } from "../../interface/interface";
 import WordCloud from "./chart/WordCloud";
+import { localAboutData } from "./data";
 
 const resumeLink =
   "https://drive.google.com/file/d/1HpJvuz3wG3S9geXldWjzLhtf3tooZ3sX/view?usp=sharing";
@@ -19,7 +19,7 @@ function About() {
         const data = await api.getAboutData();
         setAboutData(data);
       } catch (error: any) {
-        toast.error(`About: ${error.message}`);
+        setAboutData(localAboutData);
       }
     };
 
@@ -45,7 +45,6 @@ function About() {
           </button>
         </div>
       </div>
-      <Toaster />
     </section>
   );
 }
