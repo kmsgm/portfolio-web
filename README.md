@@ -34,3 +34,5 @@ Contact
 - Frontend: React, TypeScript, CSS, ESlint, Prettier, Stylelint, Boxicons, IconScout, Swiper
 - Backend: Djagno
 - Deployment: Vercel, AWS EC2, Nginx, gunicorn
+
+### Backend repo: https://github.com/kmsgm/portfolio-server
