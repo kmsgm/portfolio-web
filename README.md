@@ -1,7 +1,8 @@
 # portfolio-web
 https://portfolio-web-kmsgm.vercel.app/
 
-![스크린샷 2023-10-27 오후 7 02 22](https://github.com/kmsgm/portfolio-web/assets/49176503/64a6fda9-6cee-4f5c-915f-30015163580c)
+![web](https://github.com/kmsgm/portfolio-web/assets/49176503/38948b52-e07d-4c36-8221-63135c6b9189)
+
 
 
 
@@ -27,7 +28,7 @@ Projects
 
 Contact
 
-- [x]  Email contact
+- [x]  Email contact (emailJS)
 
 ## Technology Stacks
 
