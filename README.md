@@ -7,7 +7,7 @@ https://portfolio-web-kmsgm.vercel.app/
 
 ## Summary
 
-This is a website I made for my portfolio. It consists of an introduction to me and some simple projects. I implemented the frontend using React and the backend using Djagno. Frontend was deployed with vercel and the backend was backed by AWS EC2, Nignx, and gunicorn.
+This is a website I made for my portfolio. It consists of an introduction to me and some projects that I've done. I implemented the frontend using React and the backend using Djagno. Frontend was deployed with vercel and the backend was backed by AWS EC2, Nignx, and gunicorn. Learning both Frontend and Backend was an incredibly rewarding experience and challenge.
 
 ## Contents
 Home
@@ -32,5 +32,5 @@ Contact
 ## Technology Stacks
 
 - Frontend: React, TypeScript, CSS, ESlint, Prettier, Stylelint, Boxicons, IconScout, Swiper
-- Backend: Djagno,
+- Backend: Djagno
 - Deployment: Vercel, AWS EC2, Nginx, gunicorn
