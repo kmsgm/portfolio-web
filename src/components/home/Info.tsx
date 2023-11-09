@@ -11,6 +11,8 @@ import { ReactComponent as ReactIcon } from "../../assets/skills/react.svg";
 import { ReactComponent as TSIcon } from "../../assets/skills/typescript.svg";
 import { HomeProps } from "../../interface/interface";
 
+import KOR from "../../translate/kor.json";
+
 const Icons = [
   <PythonIcon />,
   <CIcon />,
@@ -41,9 +43,9 @@ function Info() {
     <div>
       {homeData ? (
         <div className="home__data">
-          <h1 className="home__title">{homeData?.title}</h1>
-          <h3 className="home__subtitle">{homeData?.subtitle}</h3>
-          <p className="home__description">{homeData?.description}</p>
+          <h1 className="home__title">{KOR.Home.title}</h1>
+          <h3 className="home__subtitle">{KOR.Home.subtitle}</h3>
+          <p className="home__description">{KOR.Home.description}</p>
           <div className="home__skills grid">
             <h3>Skills</h3>
             <ul className="skill__list">
