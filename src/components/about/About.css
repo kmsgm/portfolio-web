@@ -44,6 +44,14 @@
   margin-bottom: var(--mb-2-5);
 }
 
+.kor_about__description {
+  padding: 1rem 1rem 0 0;
+  margin-bottom: var(--mb-2-5);
+  font-size: 1rem;
+  line-height: 2rem;
+  white-space: pre-line;
+}
+
 .download-icon {
   width: 25px;
   height: 25px;
