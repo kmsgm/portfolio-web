@@ -10,6 +10,9 @@ import { ReactComponent as PythonIcon } from "../../assets/skills/python.svg";
 import { ReactComponent as ReactIcon } from "../../assets/skills/react.svg";
 import { ReactComponent as TSIcon } from "../../assets/skills/typescript.svg";
 import { HomeProps } from "../../interface/interface";
+import { TranslationProps } from "../../interface/interface";
+
+import KOR from "../../translate/kor.json";
 
 const Icons = [
   <PythonIcon />,
@@ -21,7 +24,7 @@ const Icons = [
   <ReactIcon />,
 ];
 
-function Info() {
+function Info({ language }: TranslationProps) {
   const [homeData, setHomeData] = useState<HomeProps>();
 
   useEffect(() => {
@@ -41,9 +44,15 @@ function Info() {
     <div>
       {homeData ? (
         <div className="home__data">
-          <h1 className="home__title">{homeData?.title}</h1>
-          <h3 className="home__subtitle">{homeData?.subtitle}</h3>
-          <p className="home__description">{homeData?.description}</p>
+          <h1 className="home__title">
+            {language === "KOR" ? KOR.Home.title : homeData.title}
+          </h1>
+          <h3 className="home__subtitle">
+            {language === "KOR" ? KOR.Home.subtitle : homeData.subtitle}
+          </h3>
+          <p className="home__description">
+            {language === "KOR" ? KOR.Home.description : homeData.description}
+          </p>
           <div className="home__skills grid">
             <h3>Skills</h3>
             <ul className="skill__list">

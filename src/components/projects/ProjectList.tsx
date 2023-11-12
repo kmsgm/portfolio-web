@@ -5,6 +5,9 @@ import { ProjectsNavProps, ProjectsDataProps } from "./model";
 import ProjectItem from "./ProjectItem";
 import { api } from "../../api/api";
 
+import KOR from "../../translate/kor.json";
+import { TranslationProps } from "../../interface/interface";
+
 const projectsNav = [
   {
     name: "All",
@@ -23,7 +26,7 @@ const projectsNav = [
   },
 ];
 
-function ProjectList() {
+function ProjectList({ language }: TranslationProps) {
   const [filter, setFilter] = useState<ProjectsNavProps>({ name: "All" });
   const [projects, setProjects] = useState<ProjectsDataProps[]>([]);
   const [active, setActive] = useState<number>(0);
@@ -81,10 +84,14 @@ function ProjectList() {
           <ProjectItem
             key={index}
             id={item.id}
-            title={item.title}
+            title={language === "KOR" ? KOR.Projects[index].title : item.title}
             category={item.category}
             period={item.period}
-            description={item.description}
+            description={
+              language === "KOR"
+                ? KOR.Projects[index].description
+                : item.description
+            }
             stack={item.stack}
             image_tag={item.image_tag}
           />

@@ -55,7 +55,12 @@ function ProjectItem({
       <div className="project__content">
         <h3 className="project__title">{title}</h3>
         <span className="project__period">{period}</span>
-        <p className="project__description">{description}</p>
+        <p
+          className="project__description"
+          style={{ fontSize: "0.9rem", lineHeight: "1.5rem" }}
+        >
+          {description}
+        </p>
         <div className="project__stacks-data">
           <i className="bx bx-badge-check about__icon" />
           <h3 className="project__stack-name">{stack}</h3>
