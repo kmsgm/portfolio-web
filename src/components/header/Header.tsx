@@ -91,7 +91,7 @@ function Header({ language, handleOnClick }: TranslationProps) {
                 }
                 onClick={handleOnClick}
               >
-                {language === "KOR" ? "KOR" : "ENG"}
+                {language === "KOR" ? "ENG" : "KOR"}
               </span>
             </li>
           </ul>
