@@ -10,7 +10,10 @@ import ScrollUp from "./components/scrollup/ScrollUp";
 import * as amplitude from "@amplitude/analytics-browser";
 
 amplitude.init("b347b185b3ee7525c57f8d2b1ef2c8d7");
-amplitude.track("Button Clicked");
+const eventProperties = {
+  buttonColor: "primary",
+};
+amplitude.track("Button Clicked", eventProperties);
 
 function App() {
   const [language, setLanguage] = useState<string>("KOR");
