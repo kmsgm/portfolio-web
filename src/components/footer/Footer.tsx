@@ -1,4 +1,4 @@
-import './Footer.css';
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -27,9 +27,9 @@ function Footer() {
         </ul>
 
         <div className="footer__social">
-          <a href="https://github.com/" className="footer__social-link">
+          {/* <a href="https://github.com/" className="footer__social-link">
             <i className="bx bxl-github" />
-          </a>
+          </a> */}
           <a href="https://www.linkedin.com/" className="footer__social-link">
             <i className="bx bxl-linkedin" />
           </a>
