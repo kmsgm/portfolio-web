@@ -13,7 +13,7 @@ amplitude.init("b347b185b3ee7525c57f8d2b1ef2c8d7");
 amplitude.track("Button Clicked");
 
 function App() {
-  const [language, setLanguage] = useState<string>("KOR");
+  const [language, setLanguage] = useState<string>("ENG");
 
   const handleOnClick = () => {
     if (language === "KOR") {
