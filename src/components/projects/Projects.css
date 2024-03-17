@@ -46,7 +46,8 @@
   /* width: 295px; */
   border-radius: 1rem;
   width: 595px;
-  max-height: 500px;
+
+  /* max-height: 500px; */
 }
 
 .project__content {
@@ -73,6 +74,13 @@
 .project__stacks-data {
   display: flex;
   column-gap: 0.5rem;
+}
+
+.project__link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: var(--mb-2);
 }
 
 .project .bx-badge-check {

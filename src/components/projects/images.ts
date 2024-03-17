@@ -16,6 +16,9 @@ import sap1 from "../../assets/projects/sap1.png";
 import sap2 from "../../assets/projects/sap2.png";
 import sap3 from "../../assets/projects/sap3.png";
 import sap4 from "../../assets/projects/sap4.png";
+import waffle1 from "../../assets/projects/waffle1.png";
+import waffle2 from "../../assets/projects/waffle2.png";
+import waffle4 from "../../assets/projects/waffle4.png";
 
 export const projectsImages = [
   {
@@ -41,5 +44,9 @@ export const projectsImages = [
   {
     tag: "sap",
     images: [sap1, sap2, sap3, sap4],
+  },
+  {
+    tag: "waffle",
+    images: [waffle1, waffle2, waffle4],
   },
 ];

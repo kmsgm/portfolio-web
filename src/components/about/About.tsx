@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 import "./About.css";
-import { api } from "../../api/api";
+// import { api } from "../../api/api";
 import { ReactComponent as FileDownloadIcon } from "../../assets/file-download-alt.svg";
 import { AboutProps } from "../../interface/interface";
 import WordCloud from "./chart/WordCloud";
@@ -19,8 +19,11 @@ function About({ language }: TranslationProps) {
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
-        const data = await api.getAboutData();
-        setAboutData(data);
+        const description =
+          "I am a person who enjoys challenges and seeks growth in various fields. I studied computer science and psychology at university and gained international experience through an exchange at Lund University. Through internships and team projects, I learned problem-solving and effective communication skills. I believe that working as a team, communicating and solving problems together rather than individually, is the environment where you can truly grow.";
+        setAboutData({ description });
+        // const data = await api.getAboutData();
+        // setAboutData(data);
       } catch (error: any) {
         toast.error(`About: ${error.message}`);
       }
