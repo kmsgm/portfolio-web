@@ -49,7 +49,7 @@ export const projectData: ProjectsDataProps[] = [
     title: "StackOverflow Clone Coding",
     period: "2021.08 - 2022.02",
     description:
-      "- The Text Recognition Data Generator (TRDG) is an open source tool designed to generate text image samples used to train OCR models. \n\n- Modified to generate text data in multiple languages based on data examples from the paper <Multilingual Mixed OCR with Reinforcement Learning>. \n\n- Achieving high accuracy for multilingual text containing Korean, Japanese, Chinese, and English is a major challenge, as existing OCR systems perform differently for each language.",
+      "- Student Management Website Development, Stackoverflow Clone Coding \n\n - Learn overall web programming knowledge, including React, JavaScript, TypeScript, CSS, SCSS, and more, and the process of collaborating as a developer.",
     stack: "React, Node.js, MongoDB, AWS",
     category: "Web",
     image_tag: "waffle",
