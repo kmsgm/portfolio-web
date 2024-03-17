@@ -30,7 +30,7 @@ export const projectData: ProjectsDataProps[] = [
     period: "2022.03 - 2022.06",
     description:
       "- Partnered with SAP Labs Korea to evaluate a data-driven cardinality estimation strategy using machine learning \n\n - Maintained clear and proactive communication, delivering regular updates and progress reports to the company \n\n- Identified project challenges and set strategies through discussion, ensuring the project stayed on track",
-    stack: "Kubernetes, Grafana, Python, Machine Learning, Data Analysis",
+    stack: "Python, Pytorch, SQL, Machine Learning, Data Analysis",
     category: "ML",
     image_tag: "flat",
   },
@@ -40,7 +40,8 @@ export const projectData: ProjectsDataProps[] = [
     period: "2022.01 - 2022.02",
     description:
       "- Catalyzed the expansion of the SAP HANA Cloud load simulator, optimizing its scalability for diverse use case \n\n - Engineered custom resources using the Kubernetes Python API, amplifying the simulator's versatility \n\n - Orchestrated monitoring via Grafana, ensuring the precise allocation of custom resources for optimal performance",
-    stack: "React, Node.js, MongoDB, AWS",
+    stack:
+      "Kubernetes, Grafana, Python, SAP HANA Cloud, Load Simulator, DevOps",
     category: "Cloud",
     image_tag: "sap",
   },
@@ -62,7 +63,7 @@ export const projectData: ProjectsDataProps[] = [
     period: "2021.07 - 2021.08",
     description:
       "- The Text Recognition Data Generator (TRDG) is an open source tool designed to generate text image samples used to train OCR models. \n\n- Modified to generate text data in multiple languages based on data examples from the paper <Multilingual Mixed OCR with Reinforcement Learning>. \n\n- Achieving high accuracy for multilingual text containing Korean, Japanese, Chinese, and English is a major challenge, as existing OCR systems perform differently for each language.",
-    stack: "React, Node.js, MongoDB, AWS",
+    stack: "Python, PyTorch, OCR, Reinforcement Learning, Data Augmentation",
     category: "ML",
     image_tag: "ocr",
   },
@@ -71,7 +72,7 @@ export const projectData: ProjectsDataProps[] = [
     title: "Web/App Startup Camp",
     period: "2021.01 - 2021.01",
     description: "Project Description",
-    stack: "React, Node.js, MongoDB, AWS",
+    stack: "Sprint, Agile, Scrum, Design Thinking, Lean Startup",
     category: "Design",
     image_tag: "sprint",
   },
