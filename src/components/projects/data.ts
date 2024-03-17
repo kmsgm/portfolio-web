@@ -51,6 +51,8 @@ export const projectData: ProjectsDataProps[] = [
     description:
       "- Student Management Website Development, Stackoverflow Clone Coding \n\n - Learn overall web programming knowledge, including React, JavaScript, TypeScript, CSS, SCSS, and more, and the process of collaborating as a developer.",
     stack: "React, Node.js, MongoDB, AWS",
+    link: "https://github.com/wafflestudio19-5/team1-web?tab=readme-ov-file",
+    linkName: "StackOverflow Clone Coding GitHub",
     category: "Web",
     image_tag: "waffle",
   },
