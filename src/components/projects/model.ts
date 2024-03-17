@@ -4,7 +4,9 @@ export interface ProjectsDataProps {
   period: string;
   description: string;
   stack: string;
-  category: string;
+  link?: string;
+  linkName?: string;
+  category?: string;
   image_tag: string;
 }
 

@@ -13,6 +13,8 @@ function ProjectItem({
   period,
   description,
   stack,
+  link,
+  linkName,
   image_tag,
 }: ProjectsDataProps) {
   SwiperCore.use([Pagination, Navigation]);
@@ -64,6 +66,11 @@ function ProjectItem({
         <div className="project__stacks-data">
           <i className="bx bx-badge-check about__icon" />
           <h3 className="project__stack-name">{stack}</h3>
+        </div>
+        <div className="project__link">
+          <a href={link}>
+            <p>{linkName}</p>
+          </a>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-import { api } from "../../api/api";
+// import { api } from "../../api/api";
 import { ReactComponent as CIcon } from "../../assets/skills/c.svg";
 import { ReactComponent as CSSIcon } from "../../assets/skills/css.svg";
 import { ReactComponent as HtmlIcon } from "../../assets/skills/html.svg";
@@ -30,8 +30,14 @@ function Info({ language }: TranslationProps) {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const data = await api.getHomeData();
-        setHomeData(data);
+        const title = "Minseo Kim";
+        const subtitle = "Software Engineer";
+        const description =
+          "I'm an undergraduate student at Seoul National University majoring in Computer Science and Engineering. I'm very passionate and dedicated to be a beautiful software engineer.";
+        setHomeData({ title, subtitle, description });
+        /* AWS backend is deprecated */
+        // const data = await api.getHomeData();
+        // setHomeData(data);
       } catch (error: any) {
         toast.error(`Home: ${error.message}`);
       }
